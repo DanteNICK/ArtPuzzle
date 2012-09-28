@@ -23,13 +23,15 @@ public final class R {
     public static final class id {
         public static final int continue_game=0x7f080000;
         public static final int exit=0x7f080004;
+        public static final int list=0x7f080005;
         public static final int load_game=0x7f080002;
-        public static final int menu_settings=0x7f080005;
+        public static final int menu_settings=0x7f080006;
         public static final int new_game=0x7f080001;
         public static final int record=0x7f080003;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
+        public static final int game=0x7f030001;
     }
     public static final class menu {
         public static final int activity_main=0x7f070000;
