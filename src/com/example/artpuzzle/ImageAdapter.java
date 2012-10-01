@@ -8,62 +8,118 @@ import android.widget.ImageView;
 
 
 public class ImageAdapter extends BaseAdapter {
-	public int [][] ImageArray;
 	private Context mContext;
-	private static Integer[][] mImages;
-	int ColCount =0;
-	int RowCount = 0;
-	
-	
-	
-	
-	public ImageAdapter(int [][] array)
-	{
-		super();
-		this.RowCount = array.length;
-		this.ColCount = array[0].length;
-		this.ImageArray = array;
-		
-		for(int i=0;i<RowCount;i++)
+	private static  Integer []  mImages =
 		{
-			for(int j=0; j<ColCount;j++)
-			{
-				this.mImages[i][j] =R.drawable.v;
-			}
-		}
 		
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright,
+		android.R.drawable.divider_horizontal_bright
+
+		};
+
+	public ImageAdapter(Context context)
+	{
+		mContext=context;
 	}
 	
-	
-	
-
 	public int getCount() {
 		// TODO Auto-generated method stub
-		return ImageArray.length;
+		return mImages.length;
 	}
 
-	public Object getItem(int arg0) {
+	public Object getItem(int position) {
 		// TODO Auto-generated method stub
-		return null;
+		return mImages[position];
 	}
 
 	public long getItemId(int position) {
 		// TODO Auto-generated method stub
-		return 0;
+		return mImages[position];
+	}
+	public void setItem(int position)
+	{
+		mImages[position] = android.R.drawable.star_on;
 	}
 
 	public View getView(int position, View convertView, ViewGroup parent) {
 		// TODO Auto-generated method stub
-		ImageView view = null;
+		ImageView view;
 		if(convertView == null)
 		{
 			view = new ImageView(mContext);
-			view.setLayoutParams(new GridView.LayoutParams(50,50));
+			view.setLayoutParams(new GridView.LayoutParams(20,20));
 			view.setScaleType(ImageView.ScaleType.CENTER_CROP);
 			view.setPadding(2, 2, 2, 2);
-			
 		}
+		else
+		
+			view = (ImageView)convertView;
+		
+		view.setImageResource(mImages[position]);
 		return view;
-
 	}
+
 }
+
