@@ -92,6 +92,7 @@ public class ImageAdapter extends BaseAdapter {
 	public Object getItem(int position) {
 		// TODO Auto-generated method stub
 		return mImages[position];
+		
 	}
 
 	public long getItemId(int position) {
@@ -101,8 +102,9 @@ public class ImageAdapter extends BaseAdapter {
 	public void setItem(int position)
 	{
 		mImages[position] = android.R.drawable.star_on;
+		
 	}
-
+	
 	public View getView(int position, View convertView, ViewGroup parent) {
 		// TODO Auto-generated method stub
 		ImageView view;
